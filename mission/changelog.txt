@@ -1,0 +1,273 @@
+0.1 24/04/2016 BETA
+- Initial release
+0.1.1 24/04/2016 BETA
+- Fixed Persistent Save: It wont corrupt Altis saves.
+- Corrected Maru respawning as Petros.
+- Corrected punishment if SDK player kills a NATO player.
+- Added an additional radio tower.
+- Small bugfixes on fastrope.
+- Flashlights should be used by SDK units (if no NV).
+- Added unlocked optics for any SDK rifle users (no marksmen)
+- Added Titan AA for militia if unlocked and skillcheck is ok.
+- Added NV if unlocked too.
+- Dogs dont make you lose Undercover if you are in a vehicle.
+- SDK players no longer see NATO players markers.
+- Engineer players can now repair vehicles.
+- Officer players can now hack UAVs.
+- NATO rebuilds towers again.
+- Corrected refugees missions: they will only spawn on destroyed cities.
+- Small +1 HR bonus on each Tax Report.
+- Safer Convoy spawn.
+- Fixed NATO player taxis.
+- Added cleanser and punishment functions for NATO taxis.
+- Added disconnected and connected functions for NATO players.
+- NATO players no longer see SDK markers.
+- NATO players receive notifications on certain SDK actions (supplies delivered on cities etc.).
+- Markers update correctly on Pers. Save.
+- Increased a bit the distance to land for helis as they are crashing a lot with trees.
+- AI won't attack other islands targets except Airports on major attacks.
+- CSAT Starts controlling the whole NW island.
+- Fixed bug on initial HQ placement.
+- Greatly improved safety and speed on despawning procedures.
+- Halved Quadbike cost.
+- Gendarmes and FIA will use flashlights.
+
+0.1.2 24/04/2016 BETA
+- NEW FEATURE: Commanders can clear the nearby forest in order to have more space for their vehicles. Persistent Save integrated.
+- Evac Refugees can happen in NATO cities with substantial differences between NATO and CSAT mission types.
+- So, removed the +1 HR bonus.
+- Corrected heavy bugs on CSAT punishments.
+- CSAT Punish defending civvies number spawned independenty of the spawn rate.
+- Map info shows "NONE" when city is supported by a radio tower in a CSAT outpost.
+- Corrected: Lose Undercover if you kill an enemy running through him with a vehicle.
+- Corrected major bug in Traitor missions.
+- City support changes on each kill no matter if it's SDK or not.
+- Solved undercover issues when players FFV.
+- Changed the name of "Airports" to "Airbases".
+- NATO Garrisons increased a bit if they are guarding a RT.
+- Tweaked bonuses for defeating a CSAT attack depending on several params.
+- NATO players will receive major attacks tasks.
+- Earplugs script added to NATO players.
+- NAPALM destroys forests.
+- Units respawn in their proper respawn point once they finish their punishment.
+- Corrected RT Rebuild bug.
+- Prestige values saved correctly.
+
+0.1.2.3 26/08/2016 BETA
+- Tweaked here and there Undercover and Revive to prevent some bugs MP related.
+- Medics are now truly medics.
+- Added ragdolling and nice effects for uncosnscious state.
+- Added 30 secs respawn delay.
+- When players respawn they will remain in control of their IEDs planted before dying.
+- Tweaked bonuses when central airport is attacked.
+- Corrected clear forest in MP.
+- Engineers will be able to disarm bombs.
+- Ammo and repair trucks will spawn on near roads on their respective missions.
+- Deads by NAPALM burn a bit like campfires for some time.
+- NATO WONT send a QRF to defend a city under attack if it's SDK.
+
+0.1.2.4 27/08/2016
+- IMPORTANT: Loosing condition: 1/3 of the total population is massacred by CSAT. Number will be shown on "Map Info".
+- IMPORTANT: R key to respawn.
+- IMPORTANT: Win conditions: more then half of the population supports SDK and SDK owns all the airports.
+- Improved AI vehicle unstuck functions.
+- "FIA" replaced by "SDK" in a few texts.
+- Changed model for SDK crewmans (FIA model, as BIS does not give us a proper unarmed SDK soldier)
+- Arty/Bomb run markers are now local for the SDK Commander.
+- MAP info will report enemy garrison status.
+- AI will try to avoid NAPALM.
+- Changed default unlocked backpack.
+- Randomised grunts rifles.
+- Added Tanoa NATO drones as attack helis
+- Added backpacks to the possible AI ammocrate loadout.
+- Added temporal inmunity for Maru just in case he dies because of NAPALM.
+- Changed speed waypoint params for Convoys by suggestion of one player. Under testing.
+- Airstrikes in QRF were accidentally half removed.
+- Unconscious units will disembark from vehicles before reaching unconscious state.
+- AIs from sidemissions won't make anything spawn.
+- Fixed when commander disconnects and despawns his AI + vehicles despite he's got players in his group.
+
+0.3 28/08/2016
+- IMPORTANT: jungles are no longer a sure safe position. SpecOp patrols cover the area if AI feels there is insurgency nearby. If SDK kills all the patrols, they will respawn in the same way roadblocks do. Sometimes, AI will decide to reinforce the area with mines.
+- Traits on engineers and medics applied to SDK AI too.
+- Dead AI teammates will get the "Revive" action deleted.
+- Refugees Evac: On NATO cities a Police car will spawn nearby to help the player on his search.
+- Convoys wont spawn during major attacks.
+- AI wont attack refugees when delivered at HQ.
+- Crew of downed AI Air vehicles will auto-die to reduce spawned units in the field.
+- Counter for major attacks will never be less than zero.
+- Added a lot predefined placed roadblocks.
+- Fixed delay when Petros was killed.
+- Few pesky "FIA" here and there.
+- Some anti lag measures when AI attacks an Airbase.
+
+0.3.1 28/08/2016
+- Greatly improved spawning garrisons with all the cache related.
+- Tasks on enemy or friendly major attacks no matter if you are the target or not.
+- Tweaked a lot spawning numbers on AI major attacks.
+- Tweaked a lot simulation enablement on several situations to improve FPS.
+- Assigned cargo units of attacking transports wont make spawn anything (the crew does).
+- SDK HQ won't be counted to spawn Specop patrols in jungles.
+- Limited napalm strikes to one each time to save fps.
+- Removed Bobcat from NATO APC vehicle pool as it has no passenger seats.
+- More reliable convoys.
+- More consistent convoys.
+
+0.3.2 30/08/2016
+- The ULTIMATE measures to improve FPS. If a player has issues, change config or... buy a new PC.
+- Really improved performance on distance spawn check script.
+- Airstrikes won't be performed if enemy has no planes available.
+- When multiple Airstrikes are done, only the first will try to destroy the zone assets, the following will aim to damage troops etc..
+- Some tasks / notifications added to NATO players.
+- Reduced a bit distance checkings for HQ placement selection.
+- CSAT zones will make you lose Undercover.
+- When in a civ heli undercover, instead of roadblocks and outposts, Airbases will have a no-fly area that will make player lose Undercover.
+- AA tanks don't despawn inmediately.
+- Bomb Run planes won't get despawned inmediately when shot down if players are there.
+- More clever AI major attacks, AI will share better the info.
+- Collision lights of some planes turned off while flying.
+- Paratroopers are now doing real jumps instead of fake ones, and use sterable chutes.
+- Parked helis won't pop smoke when AI embarks/disembarks.
+- Airbase vehicles won't despawn when AI board them.
+
+0.3.3 01/09/2016
+- IMPORTANT: In SP. 50 seconds timeout to get healed by AI for player, after that, if AI is stuck and trying to heal, player will be conscious again, but with heavy damage.
+- Corrected error when AI embarked a garrison vehicle
+- Players won't see attacking AI despawning.
+- AI uses real arty on major attacks.
+- Fixed money add on kills.
+- Removed the gamey message of money earnt on each kill
+- No more conquest missions in specop patrolled jungles.
+- Kill SpecOps missions moved to the jungle.
+- Tweaked a bit the spawn point from Ovau Airbase so maybe convoys will run better.
+- Added small drones to SpecOp patrols in jungles.
+- Attempt to avoid the recurrent bug on undercover AI losing weapons when lose undercover.
+- Defend Maru missions properly ported from Altis, they depart for an Airbase.
+- Attempt to find alternative to BIS_fnc_findSafePos for having suitable land positions for attacking helis.
+- Removed NATO Tanoa UAV as attack heli because it does not attack infantry.
+- Reworked task system in Convoy missions.
+- Almost 100% of the sidemission actions will give task or notification for NATO players.
+- Removed the overpowered AK12 from default unlocked stuff. It may appear in NATO/CSAT boxes.
+- Resources added as possible targets of conquest missions.
+- Corrected name of SDK Outposts / Roadblocks on Load.
+- Outposts can be FIA now.
+
+0.4 03/09/2016 BETA
+- Land vehicles will try to use main roads!!!
+- Fixed skill for SDK nor getting saved and loaded.
+- Fixed bug on artillery in CSAT pubishments.
+- More dense carpet bombing.
+- Civilian boats spawn in coastal cities shores. They are undercover vehicles with no zone limits.
+- Added Tanoan models to possible spawned civs.
+- SpecOps missions out of Outposts.
+- Less time to recover planes for AI.
+- Hunted some "AAF" here and there.
+- AI will attack airports even without planes if their enemy has no AA available.
+- Garrison status affects AI where to attack decission making.
+- Rescue sidemissions on low NATO Aggro will spawn Gendarmes.
+- AI skill adjusted for FIA and Gendarmes.
+- Tweaks and bugfixes on revive scripts.
+- Ensured a bit more AI carwheels are preserved if not fired by enemies.
+- Corrected small bug in conquest roadblock missions.
+- Reduced a lot minimum distance to send a Convoy.
+- Expanded zone type destination on convoys.
+- Added a lot of vehicles to sell.
+
+0.4.1 08/09/2016 BETA
+- IMPORTANT: REINFORCEMENT CONVOYS. AI will use them to boost their garrison reinforcements when needed.
+- Halved auto reinforcements on each tick.
+- Evil warlords may sell those supply trucks instead of making the delivery and fail the mission in change of some decent money.
+- Our beloved workers are back, careful with mortars!
+- Some chance AI rebuilds a resource on each tick.
+- Replaced our mean old campfire by a modern camp lamp, which you can turn on and off.
+- Lights off when a city or it's nearby RT are destroyed.
+- Severe tweak of AI skills, as SDK was supposed to be equal than NATO/CSAT. 
+- Corrected Interrogate script bug.
+- Corrected server init bug which made initialisation 2 minutes longer in MP
+- Disabled introshot as it is causing some issues.
+
+0.4.2 12/09/2016 BETA
+- Removed small bug to remove some mousewheel actions from the player
+- Corrected bug on AI attack target scripts.
+- Corrected bugs on refugees mission.
+- Assassination missions are now in the right distance.
+- Map info now shows correct info on influence.
+- SDK deaths affect NATO/CSAT aggro.
+- Garrisons get right updated when AI takes AI zones.
+- Optimised sea spawn points and air land points to get rid of BIS_fnc_findSafePos
+- Lesser unlocking requirements.
+- Bulletproffed vehicle availability functions.
+- Convoys can be FIA now.
+- Roadpatrols can be Gendarmes and FIA.
+- AI wont spawn with AK12
+- AI wont autorearm with basic stuff
+- Bulletproofed a bit more undercover for AI.
+- More tweaks on revive AI.
+- Corrected vehicle availability check procedures.
+- Less chance for NATO to build a major attack on airports.
+
+0.4.3 13/09/2016 BETA
+- Killed a few more suspects of the lockup server bug.
+
+0.4.4 13/09/2016 BETA
+- Optimised AI where to attack procedures. No more 99% chance the target will be the central airport.
+- Corrected bug in Outpost garrisons.
+- Corrected small bug on rangefinder unlocking.
+- Fixed small bug on jungle minefields.
+- Garrisons on zones under a major attack won't get saved to avoid exploits.
+- Corrected bug on spawning SDK city garrisons.
+- Added other types of possible AI squads to spawn.
+- Added some texture to the map board.
+
+0.4.5 16/09/2016 BETA
+- Attacking AI will be a bit more effective.
+- Removed LMG of default unlocked pool, changed by a cheap Sting but compatible with flashlights.
+- Removed Altis FIA uniforms on Arsenal.
+- Added Gendarmes vests as unlockable in Arsenal.
+- SDK AI will have smoke grenades if any of them has been unlocked.
+- Gendarmes will have better loadout as long as you progress in game.
+- Corrected bug on CSAT punish which collpases the game.
+- Redress for some SDK models.
+- Mags correctly removed when AI spawns with random rifle.
+- Removed all the playable slots in SP
+- Made NV use depend on game progress, only specops and squad leaders will have mandatory NV. More flashlights, darker nights, more fun!
+- AI will consider hot zone any with relevant enemie zones around
+
+0.4.6 18/09/2016 BETA
+- Added markers on HQ placement selection for visual aid.
+- Tweaks and bugfixes on revive.
+- Heavy increase radius for air assaults.
+- AI will target SDK zones from any airport no matter if it's in the same island or not.
+- Higher defenses on CSAT Airports.
+- SDK Watchpost and roadblocks wont make SpecOps spawn in jungles.
+- Taken airports won't be busy for one hour.
+- Attacking airports will become busy only after their attack has finished.
+- Corrected info markers script.
+- Maru's reinforcements will be on foot to avoid issues with Tanoa roads.
+- Faster Convoys.
+
+0.5 18/09/2016 BETA
+- NEW FEATURE: Tiered missions. As you progress in game some missions will require a contact in some city which will provide relevant info. Tier 2 missions will be harder and with some additional difficulties. Bonuses and penalties will be higher too. Those informants are treacherous, they may report you too...
+
+0.5.1 18/09/2016 BETA
+- Tweaked Arsenal: Now requirements are constant, not affected by factories.
+- Added a message on mission init so newcomers have an introduction to the persistent save system.
+- Added some delay to the prisoner rescued count in case player comes back to HQ with Fast Travel
+- Corrected small bug on convoy missions.
+- Added all possible vanilla backpacks, vests, optics etc.
+- If selected weapon to add to militia is the default one, then no weapon replacement procedure is done.
+- AI will use suppresive fire when doing retreating maneuvres.
+- Reduced enemy required distance to make AI surrender.
+- Corrected lots of issues with JIP and mousewheel actions.
+- Major land attacks will have the units more coordinated.
+- Y key re enabled on init.
+- More tweaks on revive. Unconscious units won't die because of small damage while unconscious.
+- Tweaked skillsets for AI squad leaders.
+- Tweaked spotting skills for AI during night.
+- Logistic Missions Ammotrucks no longer spawn in small roads.
+- Tweaked and improved undercover for AI.
+- Corrected aggro gains when cities change sides.
+- Convoys should have lesser distances now
+- Removing a Watchpost wont refund a roadblock.
+- Convoys behave much better (not thanks to BIS latest update)
+- Optimised ammobox loadouts to spawn only locked assets and more weapon numbers.

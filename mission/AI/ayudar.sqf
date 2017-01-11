@@ -1,0 +1,62 @@
+private ["_unit","_medico","_timeOut","_curado"];
+_unit = _this select 0;
+if (_unit getVariable ["ayudado",false]) exitWith {};
+_medico = _this select 1;
+if (_medico getVariable ["ayudando",false]) exitWith {};
+_unit setVariable ["ayudado",true];
+_medico setVariable ["ayudando",true];
+_curado = false;
+_isPlayer = if ({isPlayer _x} count units group _unit >0) then {true} else {false};
+
+if (_medico != _unit) then
+	{
+	if ((not (_unit getVariable "inconsciente")) and (not(_unit getVariable ["ayudado",false]))) then
+		{
+		if (_isPlayer) then {_unit groupChat format ["Comrades, this is %1. I'm hurt",name _unit]};
+		playSound3D [(injuredSounds call BIS_fnc_selectRandom),_unit,false, getPosASL _unit, 1, 1, 50];
+		sleep 2;
+		if (_isPlayer) then {_medico groupChat format ["Wait a minute comrade %1, I will patch you up",name _unit]};
+		};
+	if (hasInterface) then {if (player == _unit) then {hint format ["%1 is on the way to help you",name _medico]}};
+	[_medico,_unit] call cubrirConHumo;
+	_medico stop false;
+	_timeOut = time + 60;
+	_medico doMove getPosATL _unit;
+	while {true} do
+		{
+		if ((!alive _medico) or (!alive _unit) or (_medico distance _unit < 3) or (_timeOut < time) or (_medico getVariable "inconsciente") or (_unit != vehicle _unit) or (_medico != vehicle _medico)) exitWith {};
+		if (isPlayer _unit) then
+			{
+			if ((unitReady _medico) and (alive _medico) and (_medico distance _unit > 3) and (!(_medico getVariable "inconsciente"))) then {_medico setPos position _unit};
+			};
+		sleep 1;
+		};
+	if ((_unit distance _medico < 3) and (alive _unit) and (alive _medico)) then
+		{
+		_medico stop true;
+		_unit stop true;
+		_medico action ["HealSoldier",_unit];
+		sleep 10;
+		_medico stop false;
+		_unit stop false;
+		_unit dofollow leader group _unit;
+		_medico doFollow leader group _unit;
+		_curado = true;
+		if ((alive _medico) and (alive _unit) /*and (not(_unit getVariable "inconsciente"))*/ and (not(_medico getVariable "inconsciente"))) then
+			{
+			if (_medico != _unit) then {if (_isPlayer) then {_medico groupChat format ["You are ready %1",name _unit]}};
+			};
+		};
+	_unit setVariable ["ayudado",nil];
+	_medico setVariable ["ayudando",nil];
+	}
+else
+	{
+	[_medico,_medico] call cubrirConHumo;
+	_medico action ["HealSoldierSelf",_medico];
+	sleep 10;
+	_unit setVariable ["ayudado",nil];
+	_medico setVariable ["ayudando",nil];
+	_curado = true;
+	};
+_curado
