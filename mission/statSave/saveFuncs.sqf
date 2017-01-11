@@ -74,7 +74,8 @@ fn_SetStat =
 			};
 		if(_varName == 'unlockedItems') then
 			{
-			unlockedItems = _varValue;
+			my_items = ["ACRE_PRC152"];
+			unlockedItems = _varValue + my_items;
 			publicVariable "unlockedItems";
 			[caja,unlockedItems,true] call BIS_fnc_addVirtualItemCargo;
 			{
