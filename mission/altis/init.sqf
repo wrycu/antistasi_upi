@@ -1,6 +1,7 @@
 //Arma 3 - Antistasi by Barbolani
 //Do whatever you want with this code, but credit me for the thousand hours spent making this.
 enableSaving [ false, false ];
+execVM "R3F_LOG\init.sqf";
 if (isServer and (isNil "serverInitDone")) then {skipTime random 24};
 
 if (!isMultiPlayer) then

@@ -1,9 +1,10 @@
 #include "defines.hpp"
 #include "dialogs.hpp"
+#include "R3F_LOG\desc_include.h"
 
 author="Barbolani";
-OnLoadName = "Antistasi - modified";
-OnLoadMission = "Be a Resistance Leader - Be a Hero";
+OnLoadName = "Antistasi - modified by Tim";
+OnLoadMission = "Be a Resistance Leader - Be a QUESTY";
 loadScreen = "pic.JPG";
 
 overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.";
