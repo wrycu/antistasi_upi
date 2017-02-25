@@ -12,7 +12,7 @@ if (player!= _tonto) exitWith {};
 _punish = _tonto getVariable ["punish",0];
 _punish = _punish + _tiempo;
 
-disableUserInput true;
+//disableUserInput true;
 player removeMagazines (primaryWeapon player);
 removeAllItemsWithMagazines player;
 player removeMagazines (secondaryWeapon player);
