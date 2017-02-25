@@ -2,6 +2,7 @@
 //Do whatever you want with this code, but credit me for the thousand hours spent making this.
 enableSaving [ false, false ];
 execVM "R3F_LOG\init.sqf";
+execVM "upi\acreSetup.sqf";
 if (isServer and (isNil "serverInitDone")) then {skipTime random 24};
 
 if (!isMultiPlayer) then
