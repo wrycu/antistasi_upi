@@ -138,14 +138,18 @@ _dmrk setMarkerColor "ColorGUER";
 if (_x in power) then
     {
     _dmrk setMarkerType "loc_power";
-    _dmrk setMarkerText "Power Plant";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["Power Plant %1", _str];
     garrison setVariable [_x,[],true];
     _nul = [_x] call crearControles;
     };
 if (_x in aeropuertos) then
     {
     _dmrk setMarkerType "flag_AAF";
-    _dmrk setMarkerText "AAF Airport";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["AAF Airport %1", _str];
     planesAAFmax = planesAAFmax + 1;
     helisAAFmax = helisAAFmax + 2;
     server setVariable [_x,dateToNumber date,true];//fecha en fomrato dateToNumber en la que estarán idle
@@ -155,7 +159,9 @@ if (_x in aeropuertos) then
 if (_x in bases) then
     {
     _dmrk setMarkerType "flag_AAF";
-    _dmrk setMarkerText "AAF Base";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["AAF Base %1", _str];
     APCAAFmax = APCAAFmax + 2;
     tanksAAFmax = tanksAAFmax + 1;
     server setVariable [_x,dateToNumber date,true];//fecha en fomrato dateToNumber en la que estarán idle
@@ -165,21 +171,27 @@ if (_x in bases) then
 if (_x in recursos) then
     {
     _dmrk setMarkerType "loc_rock";
-    _dmrk setMarkerText "Resources";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["Resources %1", _str];
     _nul = [_x] call crearControles;
     garrison setVariable [_x,[],true];
     };
 if (_x in fabricas) then
     {
     _dmrk setMarkerType "u_installation";
-    _dmrk setMarkerText "Factory";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["Factory %1", _str];
     _nul = [_x] call crearControles;
     garrison setVariable [_x,[],true];
     };
 if (_x in puestos) then
     {
     _dmrk setMarkerType "loc_bunker";
-    _dmrk setMarkerText "AAF Outpost";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["AAF Outpost %1", _str];
     _nul = [_x] call crearControles;
     garrison setVariable [_x,[],true];
     };
@@ -187,7 +199,9 @@ if (_x in puestos) then
 if (_x in puestosAA) then
     {
     _dmrk setMarkerType "loc_bunker";
-    _dmrk setMarkerText "AAF AA OP";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["AAF AA OP %1", _str];
     _nul = [_x] call crearControles;
     garrison setVariable [_x,[],true];
     };
@@ -195,7 +209,9 @@ if (_x in puestosAA) then
 if (_x in puertos) then
     {
     _dmrk setMarkerType "b_naval";
-    _dmrk setMarkerText "Sea Port";
+	_stringArray = format["%1", _x] splitString "_";
+	_str = _stringArray select 1;
+    _dmrk setMarkerText format ["Sea Port %1", _str];
     _nul = [_x] call crearControles;
     garrison setVariable [_x,[],true];
     };

@@ -113,21 +113,27 @@ if (_x in mrkFIA) then
 		};
 	if (_x in aeropuertos) then
 		{
-		_mrkD setMarkerText format ["FIA Airport: %1",count (garrison getVariable _x)];
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		_mrkD setMarkerText format ["FIA Airport %2: %1",count (garrison getVariable _x), _str];
 		_mrkD setMarkerType "flag_FIA";
 		planesAAFmax = planesAAFmax - 1;
 	    helisAAFmax = helisAAFmax - 2;
 	    };
 	if (_x in bases) then
 		{
-		_mrkD setMarkerText format ["FIA Base: %1",count (garrison getVariable _x)];
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		_mrkD setMarkerText format ["FIA Base %2: %1",count (garrison getVariable _x), _str];
 		_mrkD setMarkerType "flag_FIA";
 		APCAAFmax = APCAAFmax - 2;
     	tanksAAFmax = tanksAAFmax - 1;
 		};
 	if (_x in puestos) then
 		{
-		_mrkD setMarkerText format ["FIA Outpost: %1",count (garrison getVariable _x)];
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		_mrkD setMarkerText format ["FIA Outpost %2: %1",count (garrison getVariable _x), _str];
 		};
 	if (_x in ciudades) then
 		{
@@ -140,7 +146,9 @@ if (_x in mrkFIA) then
 		};
 	if ((_x in recursos) or (_x in fabricas)) then
 		{
-		if (_x in recursos) then {_mrkD setMarkerText format ["Resource: %1",count (garrison getVariable _x)]} else {_mrkD setMarkerText format ["Factory: %1",count (garrison getVariable _x)]};
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		if (_x in recursos) then {_mrkD setMarkerText format ["Resource %2: %1",count (garrison getVariable _x), _str]} else {_mrkD setMarkerText format ["Factory %2: %1",count (garrison getVariable _x), _str]};
 		_power = [power, getMarkerPos _x] call BIS_fnc_nearestPosition;
 		if ((not (_power in mrkFIA))  or (_power in destroyedCities)) then
 			{
@@ -150,11 +158,15 @@ if (_x in mrkFIA) then
 		};
 	if (_x in puertos) then
 		{
-		_mrkD setMarkerText format ["Sea Port: %1",count (garrison getVariable _x)];
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		_mrkD setMarkerText format ["Sea Port %2: %1",count (garrison getVariable _x), _str];
 		};
 	if (_x in power) then
 		{
-		_mrkD setMarkerText format ["Power Plant: %1",count (garrison getVariable _x)];
+		_stringArray = format["%1", _x] splitString "_";
+		_str = _stringArray select 1;
+		_mrkD setMarkerText format ["Power Plant %2: %1",count (garrison getVariable _x), _str];
 		if (_x in destroyedCities) then {[_x] call destroyCity};
 		};
 	};
